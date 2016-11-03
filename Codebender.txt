@@ -1,0 +1,20 @@
+int UD = 0;
+int LR = 0;
+int GG = 0;
+void setup()
+{
+    Serial.begin(9600);
+}
+void loop()
+{
+    UD = analogRead(A0);
+    LR = analogRead(A1);
+    GG = analogRead(A2);
+    Serial.print(UD, DEC);
+    Serial.print(",");
+    Serial.print(LR, DEC);
+    Serial.print(",");
+     Serial.println(GG, DEC);
+    delay(200);
+
+}
